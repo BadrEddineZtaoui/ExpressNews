@@ -32,21 +32,21 @@
 				{{ Form::text('slug', null, array('class' => 'form-control', 'required' => '', 'minlength' => '5', 'maxlength' => '255') ) }}
 
 				{{ Form::label('category_id', 'Category:') }}
-				<select class="form-control" name="category_id">
-					<!--@foreach($categories as $category)
+				<!--<select class="form-control" name="category_id">
+					@foreach($categories as $category)
 						<option value='{{ $category->id }}'>{{ $category->name }}</option>
-					@endforeach-->
+					@endforeach
 
-				</select>
+				</select>-->
 
 
 				{{ Form::label('tags', 'Tags:') }}
-				<select class="form-control select2-multi" name="tags[]" multiple="multiple">
-					<!--@foreach($tags as $tag)
+				<!--<select class="form-control select2-multi" name="tags[]" multiple="multiple">
+					@foreach($tags as $tag)
 						<option value='{{ $tag->id }}'>{{ $tag->name }}</option>
-					@endforeach-->
+					@endforeach
 
-				</select>
+				</select>-->
 
 				{{ Form::label('featured_img', 'Upload a Featured Image') }}
 				{{ Form::file('featured_img') }}
