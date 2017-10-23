@@ -47,7 +47,7 @@
 					@endforeach
 
 				</select>-->
-
+				<!--test dddaa oz -->
 				{{ Form::label('featured_img', 'Upload a Featured Image') }}
 				{{ Form::file('featured_img') }}
 
