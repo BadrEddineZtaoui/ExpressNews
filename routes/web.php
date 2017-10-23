@@ -32,3 +32,5 @@ Route::get('auth/login', ['as' => 'login', 'uses' => 'Auth\LoginController@getLo
 Route::resource('article', 'ArticleController');
 Route::resource('category', 'CategoryController');
 Route::resource('subCategory', 'SubCategoryController');
+Route::resource('tag', 'TagController');
+Route::resource('comment', 'CommentController');

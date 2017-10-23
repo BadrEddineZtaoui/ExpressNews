@@ -10,4 +10,14 @@ class Article extends Model
     {
         return $this->belongsTo('App\Sub_Category');
     }
+
+    public function tags()
+    {
+    	return $this->belongsToMany('App\Tag');
+    }
+
+    public function comments()
+    {
+    	return $this->hasMany('App\Comment');
+    }
 }

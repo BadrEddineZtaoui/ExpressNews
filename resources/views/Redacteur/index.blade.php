@@ -47,7 +47,7 @@
 					@endforeach
 
 				</select>-->
-				<!--test for git push-->
+
 				{{ Form::label('featured_img', 'Upload a Featured Image') }}
 				{{ Form::file('featured_img') }}
 
@@ -63,4 +63,15 @@
 
 @section('aside')
 	@include('Redacteur._aside')
+@endsection
+
+@section('scripts')
+
+	{!! Html::script('js/parsley.min.js') !!}
+	{!! Html::script('js/select2.min.js') !!}
+
+	<script type="text/javascript">
+		$('.select2-multi').select2();
+	</script>
+
 @endsection
