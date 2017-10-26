@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('pages.index');
 });
@@ -29,8 +30,8 @@ Route::get('Redacteur/index', function () {
 
 Route::get('auth/login', ['as' => 'login', 'uses' => 'Auth\LoginController@getLogin']);
 
-Route::resource('article', 'ArticleController');
-Route::resource('category', 'CategoryController');
-Route::resource('subCategory', 'SubCategoryController');
-Route::resource('tag', 'TagController');
-Route::resource('comment', 'CommentController');
+Route::resource('articles', 'ArticleController');
+Route::resource('categories', 'CategoryController');
+Route::resource('subCategories', 'SubCategoryController');
+Route::resource('tags', 'TagController');
+Route::resource('comments', 'CommentController');

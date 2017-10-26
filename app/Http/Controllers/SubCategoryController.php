@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Sub_Category;
+use Session;
 
 class SubCategoryController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +19,8 @@ class SubCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $SubCategories = Category::all();
+        return view('subCategories.index')->withSubCategories($SubCategories);
     }
 
     /**
@@ -34,7 +41,19 @@ class SubCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Save a new subcategory and then redirect back to index
+        $this->validate($request, array(
+            'name' => 'required|max:255'
+            ));
+
+        $subCategory = new Sub_Category;
+
+        $subCategory->name = $request->name;
+        $subCategory->save();
+
+        Session::flash('success', 'New SubCategory has been created');
+
+        return redirect()->route('SubCategories.index');
     }
 
     /**

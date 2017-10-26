@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
+use Session;
 
 class CategoryController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +19,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return view('categories.index')->withCategories($categories);
     }
 
     /**
@@ -34,7 +41,19 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Save a new category and then redirect back to index
+        $this->validate($request, array(
+            'name' => 'required|max:255'
+            ));
+
+        $category = new Category;
+
+        $category->name = $request->name;
+        $category->save();
+
+        Session::flash('success', 'New Category has been created');
+
+        return redirect()->route('categories.index');
     }
 
     /**
