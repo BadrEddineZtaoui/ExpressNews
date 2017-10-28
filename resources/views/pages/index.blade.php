@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('content')
-
+//hello is a git test by Oz 2
 	<div class="slider">
 		<div class="callbacks_wrap">
 			<ul class="rslides" id="slider">
