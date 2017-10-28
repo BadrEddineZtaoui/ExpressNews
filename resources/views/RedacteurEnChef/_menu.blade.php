@@ -1,7 +1,7 @@
 <ul id="menu" class="collapse">
             
     <li class="panel">
-        <a href="index.html" >
+        <a href="#" >
             <i class="icon-home"></i> Dashboard
         </a>                   
     </li>
@@ -17,7 +17,7 @@
         </a>
         <ul class="collapse" id="component-nav">
            
-            <li class=""><a href="button.html"><i class="icon-angle-right"></i> Redacteurs non Approuver </a></li>
+            <li class=""><a href="button.html"><i class="icon-angle-right"></i> Redacteurs en Cours... </a></li>
 
         </ul>
     </li>
@@ -33,7 +33,7 @@
         </a>
         <ul class="collapse" id="form-nav">
            
-            <li class=""><a href="button.html"><i class="icon-angle-right"></i> Articles non Approuver </a></li>
+            <li class=""><a href="button.html"><i class="icon-angle-right"></i> Articles en Cours... </a></li>
 
         </ul>
     </li>
@@ -47,6 +47,6 @@
     </li>
 
     <li class="panel ">
-        <a href="#"><i class="icon-list-ul"></i> Categories</a>
+        <a href="#"><i class="icon-list-ul"></i> Sous Categories</a>
     </li>
 </ul>

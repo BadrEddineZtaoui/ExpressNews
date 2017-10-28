@@ -19,8 +19,15 @@ class CreateAdminsTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('role');
+            $table->integer('category_id')->unsigned();
+            $table->integer('exp');
+            $table->string('lastMag');
             $table->rememberToken();
             $table->timestamps();
+        });
+
+        Schema::table('admins', function ($table){
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

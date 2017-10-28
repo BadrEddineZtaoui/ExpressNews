@@ -1,50 +1,25 @@
 <ul id="menu" class="collapse">
             
     <li class="panel">
-        <a href="index.html" >
+        <a href="#" >
             <i class="icon-home"></i> Dashboard
         </a>                   
     </li>
-    
+
     <li class="panel ">
-        <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
-            <i class="icon-group"> </i> Acteurs     
-
-            <span class="pull-right">
-              <i class="icon-angle-left"></i>
-            </span>
-           &nbsp; <span class="label label-default">2</span>&nbsp;
-        </a>
-        <ul class="collapse" id="component-nav">
-           
-            <li class=""><a href="button.html"><i class="icon-angle-right"></i> Redacteurs En Chef </a></li>
-            <li class=""><a href="button.html"><i class="icon-angle-right"></i> Redacteurs </a></li>
-
-        </ul>
+        <a href="#"><i class="icon-file-text"> </i> Articles</a>
     </li>
 
     <li class="panel ">
-        <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#form-nav">
-            <i class="icon-file-text"> </i> Articles     
-
-            <span class="pull-right">
-              <i class="icon-angle-left"></i>
-            </span>
-           &nbsp; <span class="label label-default">10</span>&nbsp;
-        </a>
-        <ul class="collapse" id="form-nav">
-           
-            <li class=""><a href="button.html"><i class="icon-angle-right"></i> Articles non Approuver </a></li>
-
-        </ul>
+        <a href="#"><i class="icon-tags"></i> Redacteurs En Chef </a>
     </li>
 
-    <li><a href="gallery.html"><i class="icon-comment"></i> Commentaires 
-        &nbsp; <span class="label label-default">5</span>&nbsp;
-    </a></li>
+    <li class="panel ">
+        <a href="#"><i class="icon-group"></i> Redacteurs </a>
+    </li>
     
     <li class="panel ">
-        <a href="#"><i class="icon-tags"></i> Tags</a>
+        <a href="#"><i class="icon-group"></i> Tags</a>
     </li>
 
     <li class="panel ">
