@@ -35,7 +35,7 @@ class ArticleController extends Controller
     {
         $categories = Category::all();
         $tags = Tag::all();
-        return view('articles.create')->withCategories($categories)->withTags($tags);
+        return view('Redacteur.createArticle')->withCategories($categories)->withTags($tags);
     }
 
     /**
@@ -48,10 +48,10 @@ class ArticleController extends Controller
     {
         // validate the data
         $this->validate($request, array(
-                'title'         => 'required|max:255',
+                'title'        => 'required|max:255',
                 'url'          => 'required|alpha_dash|min:5|max:255|unique:articles,url',
-                'category_id'   => 'required|integer',
-                'body'          => 'required'
+                'category_id'  => 'required|integer',
+                'content'      => 'required'
             ));
 
         // store in the database
@@ -61,15 +61,16 @@ class ArticleController extends Controller
         $article->url = $request->url;
         $article->category_id = $request->category_id;
         $article->body = Purifier::clean($request->body);
+        $article->approuved = false;
 
-        if ($request->hasFile('featured_img')) {
+        /*if ($request->hasFile('featured_img')) {
           $image = $request->file('featured_img');
           $filename = time() . '.' . $image->getClientOriginalExtension();
           $location = public_path('images/' . $filename);
           Image::make($image)->resize(800, 400)->save($location);
 
           $article->image = $filename;
-        }
+        }*/
 
         $article->save();
 
@@ -77,7 +78,7 @@ class ArticleController extends Controller
 
         Session::flash('success', 'The blog post was successfully save!');
 
-        return redirect()->route('posts.show', $article->id);
+        return redirect()->route('articles.show', $article->id);
     }
 
     /**

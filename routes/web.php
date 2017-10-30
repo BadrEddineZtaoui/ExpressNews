@@ -28,6 +28,14 @@ Route::get('Redacteur/index', function () {
     return view('Redacteur/index');
 })->name('Redacteur/index');
 
+Route::get('Redacteur/createArticle', function () {
+    return view('Redacteur/createArticle');
+})->name('Redacteur/createArticle');
+
+Route::get('RedacteurEnChef/index', function () {
+    return view('RedacteurEnChef/index');
+})->name('RedacteurEnChef/index');
+
 Route::get('auth/login', ['as' => 'login', 'uses' => 'Auth\LoginController@getLogin']);
 
 Route::resource('articles', 'ArticleController');
