@@ -24,6 +24,14 @@ Route::get('mainAdmin', function () {
     return view('mainAdmin');
 })->name('mainAdmin');
 
+//Admin routes
+//Route::get('Admin/categories', function () {
+//    return view('Admin/categories');
+//})->name('Admin/categories');
+Route::get('Admin/categories', ['as' => 'categories', 'uses' => 'CategoryController@index']);
+
+
+//Redacteur routes
 Route::get('Redacteur/index', function () {
     return view('Redacteur/index');
 })->name('Redacteur/index');
@@ -32,6 +40,8 @@ Route::get('Redacteur/createArticle', function () {
     return view('Redacteur/createArticle');
 })->name('Redacteur/createArticle');
 
+
+//Redacteur En Chef routes
 Route::get('RedacteurEnChef/index', function () {
     return view('RedacteurEnChef/index');
 })->name('RedacteurEnChef/index');
@@ -43,3 +53,6 @@ Route::resource('categories', 'CategoryController');
 Route::resource('subCategories', 'SubCategoryController');
 Route::resource('tags', 'TagController');
 Route::resource('comments', 'CommentController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

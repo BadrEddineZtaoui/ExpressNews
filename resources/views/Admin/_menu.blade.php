@@ -23,6 +23,6 @@
     </li>
 
     <li class="panel ">
-        <a href="#"><i class="icon-list-ul"></i> Categories</a>
+        <a href="{{ route('categories.index') }}"><i class="icon-list-ul"></i> Categories</a>
     </li>
 </ul>
