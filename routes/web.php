@@ -46,7 +46,7 @@ Route::get('RedacteurEnChef/index', function () {
     return view('RedacteurEnChef/index');
 })->name('RedacteurEnChef/index');
 
-Route::get('auth/login', ['as' => 'login', 'uses' => 'Auth\LoginController@getLogin']);
+//Route::get('auth/login', ['as' => 'login', 'uses' => 'Auth\LoginController@getLogin']);
 
 Route::resource('articles', 'ArticleController');
 Route::resource('categories', 'CategoryController');
