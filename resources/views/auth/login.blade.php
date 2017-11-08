@@ -1,94 +1,144 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
-
-<!-- BEGIN HEAD -->
+<html>
 <head>
-     <meta charset="UTF-8" />
-    <title>BCORE Admin Dashboard Template | Login Page</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	<meta content="" name="description" />
-	<meta content="" name="author" />
-     <!--[if IE]>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <![endif]-->
-    <!-- GLOBAL STYLES -->
-     <!-- PAGE LEVEL STYLES -->
-     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/magic/magic.css') }}" />
-     <!-- END PAGE LEVEL STYLES -->
-   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href={{ asset('css/styleL.css') }} rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+
+<!-- font-awesome icons -->
+<link href={{ asset('css/font-awesomeL.css') }} rel="stylesheet"> 
+<!-- //font-awesome icons -->
+
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Cormorant+Unicase:300,400,500,600,700" rel="stylesheet"><!--web font-->
+<!-- //web font -->
 </head>
-    <!-- END HEAD -->
+<body>
+    <!-- main -->
+    <div class="main agileits-w3layouts">
+        <h1 style="height: 55px; margin-top: -20px;"><img src="images/logo.jpg" alt="" /></h1>
+        <div class="main-agileinfo"> 
+            <div class="agileui-forms">
+                <div class="container-form">
+                    <div class="form-item log-in"><!-- login form-->
+                        <div class="w3table agileinfo"> 
+                            <div class="w3table-cell register"> 
+                                <div class="w3table-tophead">
+                                    <h2>Sign in</h2>
+                                </div>
+                                <form action="{{ route('login') }}" method="post"> 
+                                    {{ csrf_field() }}
+                                    <div class="fields-grid">
+                                        <div class="styled-input agile-styled-input-top">
+                                            <input id="email" type="email" name="email" required="" value="{{old('email')}}" autofocus>
+                                            <label>Email</label>
+                                            <span></span>
+                                        </div>
+                                        <div class="styled-input">
+                                            <input id="password" type="password" name="password" required="">
+                                            <label>Password</label>
+                                            <span></span>
+                                        </div>
+                                        <label class="checkbox" style="margin-left: 25px;">
+                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
+                                            <i></i>Remember Me</a>
+                                        </label>
+                                        <a href="{{ route('password.request') }}">forgot password?</a>            
+                                        <input type="submit" value="Sign in"> 
+                                    </div>
+                                    <div class="social-grids">
+                                        <div class="social-text">
+                                            <p>Or Sign in with</p>
+                                        </div>
+                                        <div class="social-icons">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clear"> </div>
+                                    </div>
 
-    <!-- BEGIN BODY -->
-<body >
+                                </form>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item sign-up"><!-- sign-up form-->
+                        <div class="w3table w3-agileits">
+                            <div class="w3table-cell register">   
+                                    <h3>Sign up</h3>
+                                <form action="{{ route('register') }}" method="post">
+                                    {{ csrf_field() }}
+                                    <div class="fields-grid">
+                                        <div class="styled-input agile-styled-input-top">
+                                            <input id="name" type="text" name="name" required="" value="{{ old('name') }}"> 
+                                            <label>Name</label>
+                                            <span></span>
+                                        </div>
+                                        <div class="styled-input">
+                                            <input id="email" type="email" name="email" required="" value="{{old('email')}}">
+                                            <label>Email</label>
+                                            <span></span>
+                                        </div>
+                                        <div class="styled-input">
+                                            <input id="password" type="password" name="password" required="">
+                                            <label>Password</label>
+                                            <span></span>
+                                        </div>
+                                        <div class="styled-input">
+                                            <input id="password-confirm" type="password" name="password_confirmation" required="">
+                                            <label>Confirm Password</label>
+                                            <span></span>
+                                        </div>
+                                        <div class="clear"> </div>
+                                    </div>
+                                    <input type="submit" value="Sign up">
+                                </form>
 
-   <!-- PAGE CONTENT --> 
-    <div class="container">
-    <div class="text-center">
-        <img src="assets/img/logo.png" id="logoimg" alt=" Logo" />
-    </div>
-    <div class="tab-content">
-        <div id="login" class="tab-pane active">
-            {!! Form::open(array('route' => 'mainAdmin', 'class' => 'form-signin', 'method' => 'POST')) !!}
-           
-                <p class="text-muted text-center btn-block btn btn-primary btn-rect">
-                    Enter your username and password
-                </p>
-                <input type="text" placeholder="Username" class="form-control" />
-                <input type="password" placeholder="Password" class="form-control" />
-                <button class="btn text-muted text-center btn-danger" type="submit">Sign in</button>
-            {!! Form::close() !!}
-        </div>
-        <div id="forgot" class="tab-pane">
-            {!! Form::open(array('route' => 'mainAdmin', 'class' => 'form-signin', 'method' => 'POST')) !!}
-            
-                <p class="text-muted text-center btn-block btn btn-primary btn-rect">Enter your valid e-mail</p>
-                <input type="email"  required="required" placeholder="Your E-mail"  class="form-control" />
-                <br />
-                <button class="btn text-muted text-center btn-success" type="submit">Recover Password</button>
-            {!! Form::close() !!}
-        </div>
-        <div id="signup" class="tab-pane">
-            {!! Form::open(array('route' => 'mainAdmin', 'class' => 'form-signin', 'method' => 'POST')) !!}
-            
-                <p class="text-muted text-center btn-block btn btn-primary btn-rect">Please Fill Details To Register</p>
-                 <input type="text" placeholder="First Name" class="form-control" />
-                 <input type="text" placeholder="Last Name" class="form-control" />
-                <input type="text" placeholder="Username" class="form-control" />
-                <input type="email" placeholder="Your E-mail" class="form-control" />
-                <input type="password" placeholder="password" class="form-control" />
-                <input type="password" placeholder="Re type password" class="form-control" />
-                <button class="btn text-muted text-center btn-success" type="submit">Register</button>
-            {!! Form::close() !!}
-        </div>
-    </div>
-    <div class="text-center">
-        <ul class="list-inline">
-            <li><a class="text-muted" href="#login" data-toggle="tab">Login</a></li>
-            <li><a class="text-muted" href="#forgot" data-toggle="tab">Forgot Password</a></li>
-            <li><a class="text-muted" href="#signup" data-toggle="tab">Signup</a></li>
-        </ul>
-    </div>
-
-
-</div>
-
-	  <!--END PAGE CONTENT -->     
-	      
-      <!-- PAGE LEVEL SCRIPTS -->
-      <script src="{{ asset('js/jquery-2.0.3.min.js') }}"></script>
-      <script src="{{ asset('js/bootstrap.js') }}"></script>
-      <script src="{{ asset('js/login.js') }}"></script>
-      <!--END PAGE LEVEL SCRIPTS -->
-
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-info">
+                    <div class="info-w3lsitem">
+                        <div class="w3table">
+                            <div class="w3table-cell">
+                                <p> Have an account? </p>
+                                <div class="btn"> Sign in </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-w3lsitem">
+                        <div class="w3table">
+                            <div class="w3table-cell">
+                                <p> Dont have an account?</p>
+                                <div class="btn">Sign up</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"> </div>
+                </div> 
+                
+                
+            </div> 
+        </div>  
+    </div>   
+    <!-- //main -->
+    <!-- js -->  
+    <script  src={{ asset('js/jquery-2.0.3.min.js') }}></script> 
+    <script>
+        $(".info-w3lsitem .btn").click(function() {
+              $(".main-agileinfo").toggleClass("log-in");
+            });
+            $(".container-form .btn").click(function() {
+              $(".main-agileinfo").addClass("active");
+        });
+    </script>
+    <!-- //js --> 
 </body>
-    <!-- END BODY -->
 </html>
