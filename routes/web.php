@@ -48,11 +48,15 @@ Route::get('RedacteurEnChef/index', function () {
 
 //Route::get('auth/login', ['as' => 'login', 'uses' => 'Auth\LoginController@getLogin']);
 
+
 Route::resource('articles', 'ArticleController');
 Route::resource('categories', 'CategoryController');
 Route::resource('subCategories', 'SubCategoryController');
 Route::resource('tags', 'TagController');
 Route::resource('comments', 'CommentController');
+
+Route::get('admins-login', 'Admins\Auth\LoginController@showLoginForm')->name('admin.login');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
