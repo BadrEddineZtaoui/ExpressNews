@@ -14,10 +14,10 @@ class AddUserAttr extends Migration
     public function up()
     {
         Schema::table('users', function ($table){
-            $table->string('role');
-            $table->integer('category_id')->unsigned();
-            $table->integer('exp');
-            $table->string('lastMag');
+            $table->string('role')->default('lecteur');
+            $table->integer('category_id')->unsigned()->nullable();
+            $table->integer('exp')->nullable();
+            $table->string('lastMag')->nullable();
         });
     }
 
