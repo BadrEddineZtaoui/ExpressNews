@@ -26,6 +26,10 @@ Route::get('mainAdmin', function () {
 
 //Admin routes
 Route::get('Admin/index', ['as' => 'adminIndex', 'uses' => 'AdminController@index']);
+Route::get('Admin/articles', ['as' => 'adminArticles', 'uses' => 'AdminController@articles']);
+Route::get('Admin/refs', ['as' => 'adminRefs', 'uses' => 'AdminController@refs']);
+Route::get('Admin/reds', ['as' => 'adminReds', 'uses' => 'AdminController@reds']);
+Route::get('Admin/tags', ['as' => 'adminTags', 'uses' => 'AdminController@tags']);
 Route::get('Admin/categories', ['as' => 'categories', 'uses' => 'CategoryController@index']);
 
 

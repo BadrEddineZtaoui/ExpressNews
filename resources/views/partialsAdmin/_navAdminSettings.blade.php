@@ -9,7 +9,13 @@
         <li><a href="#"><i class="icon-gear"></i> Settings </a>
         </li>
         <li class="divider"></li>
-        <li><a href="login.html"><i class="icon-signout"></i> Logout </a>
+        <li><a href="{{ route('logout') }}" 
+            onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"
+            ><i class="icon-signout"></i> Logout </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
         </li>
     </ul>
 </li>

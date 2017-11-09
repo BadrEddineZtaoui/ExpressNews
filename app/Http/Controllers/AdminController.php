@@ -7,9 +7,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * l'accueil de l'admin
      */
     public function index()
     {
@@ -17,15 +15,37 @@ class AdminController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * retourne les articles pour un admin
      */
-    public function create()
+    public function articles()
     {
-        //
+        return view('Admin/articles');
     }
 
+
+    /**
+     * retourne les articles pour un admin
+     */
+    public function refs()
+    {
+        return view('Admin/refs');
+    }
+
+    /**
+     * retourne les articles pour un admin
+     */
+    public function reds()
+    {
+        return view('Admin/reds');
+    }
+
+    /**
+     * retourne les articles pour un admin
+     */
+    public function tags()
+    {
+        return view('Admin/tags');
+    }
     /**
      * Store a newly created resource in storage.
      *
