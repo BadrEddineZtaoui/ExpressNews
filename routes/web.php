@@ -25,9 +25,7 @@ Route::get('mainAdmin', function () {
 })->name('mainAdmin');
 
 //Admin routes
-//Route::get('Admin/categories', function () {
-//    return view('Admin/categories');
-//})->name('Admin/categories');
+Route::get('Admin/index', ['as' => 'adminIndex', 'uses' => 'AdminController@index']);
 Route::get('Admin/categories', ['as' => 'categories', 'uses' => 'CategoryController@index']);
 
 
