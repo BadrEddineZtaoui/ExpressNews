@@ -44,9 +44,13 @@ Route::get('Redacteur/createArticle', function () {
 
 
 //Redacteur En Chef routes
-Route::get('RedacteurEnChef/index', function () {
-    return view('RedacteurEnChef/index');
-})->name('RedacteurEnChef/index');
+Route::get('RedacteurEnChef/index', ['as' => 'refIndex', 'uses' => 'RedacteurEnChefController@index']);
+Route::get('RedacteurEnChef/articles', ['as' => 'refArticles', 'uses' => 'RedacteurEnChefController@articles']);
+Route::get('RedacteurEnChef/comments', ['as' => 'refComments', 'uses' => 'RedacteurEnChefController@comments']);
+Route::get('RedacteurEnChef/redacteurs', ['as' => 'refRedacteurs', 'uses' => 'RedacteurEnChefController@reds']);
+Route::get('RedacteurEnChef/sousCategories', ['as' => 'refSousCat', 'uses' => 'RedacteurEnChefController@sousCat']);
+
+
 
 //Route::get('auth/login', ['as' => 'login', 'uses' => 'Auth\LoginController@getLogin']);
 

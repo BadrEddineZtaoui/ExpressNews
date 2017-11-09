@@ -8,7 +8,7 @@
     </li>
     
     <li class="panel ">
-        <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
+        <a href="{{ route('refRedacteurs') }}" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
             <i class="icon-group"> </i> Redacteurs     
 
             <span class="pull-right">
@@ -24,7 +24,7 @@
     </li>
 
     <li class="panel ">
-        <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#form-nav">
+        <a href="{{ route('refArticles') }}" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#form-nav">
             <i class="icon-file-text"> </i> Articles     
 
             <span class="pull-right">
@@ -39,15 +39,11 @@
         </ul>
     </li>
 
-    <li><a href="gallery.html"><i class="icon-comment"></i> Commentaires 
+    <li><a href="{{ route('refComments') }}"><i class="icon-comment"></i> Commentaires 
         &nbsp; <span class="label label-default">5</span>&nbsp;
     </a></li>
-    
-    <li class="panel ">
-        <a href="#"><i class="icon-tags"></i> Tags</a>
-    </li>
 
     <li class="panel ">
-        <a href="#"><i class="icon-list-ul"></i> Sous Categories</a>
+        <a href="{{ route('refSousCat') }}"><i class="icon-list-ul"></i> Sous Categories</a>
     </li>
 </ul>
