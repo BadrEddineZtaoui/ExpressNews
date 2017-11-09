@@ -2,7 +2,8 @@
             
     <li class="panel">
         <a href="#" >
-            <i class="icon-home"></i> Dashboard
+            <i class="icon-home"></i> Dashboard 
+          <!-- liste des articles selon redacteurs -->  
         </a>                   
     </li>
     
