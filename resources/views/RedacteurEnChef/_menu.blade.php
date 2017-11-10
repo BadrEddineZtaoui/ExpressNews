@@ -16,6 +16,25 @@
             </span>
            &nbsp; <span class="label label-default">2</span>&nbsp;
         </a>
+
+        <ul class="in" id="component-nav">
+                       
+                        <li class=""><a href="{{ route('refRedacteurs') }}" ><i class="icon-angle-right"></i> Demande de poste rédacteur </a></li>
+                        <li class=""><a href="{{ route('listRedacteurs') }}"><i class="icon-angle-right"></i> Liste des Rédacteurs </a></li>
+                        <li class=""><a href="progress.html"><i class="icon-angle-right"></i> Progress </a></li>
+                        <li class=""><a href="tabs_panels.html"><i class="icon-angle-right"></i> Tabs &amp; Panels </a></li>
+                        <li class=""><a href="notifications.html"><i class="icon-angle-right"></i> Notification </a></li>
+                         <li class=""><a href="more_notifications.html"><i class="icon-angle-right"></i> More Notification </a></li>
+                        <li class=""><a href="modals.html"><i class="icon-angle-right"></i> Modals </a></li>
+                          <li class=""><a href="wizard.html"><i class="icon-angle-right"></i> Wizard </a></li>
+                         <li class=""><a href="sliders.html"><i class="icon-angle-right"></i> Sliders </a></li>
+                        <li class=""><a href="typography.html"><i class="icon-angle-right"></i> Typography </a></li>
+                    </ul>
+
+
+
+
+
         <ul class="collapse" id="component-nav">
            
             <li class=""><a href="button.html"><i class="icon-angle-right"></i> Redacteurs en Cours... </a></li>

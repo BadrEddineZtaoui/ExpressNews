@@ -14,40 +14,49 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Demandeur</th>
-                                            <th>Catégorie</th>
-											<th>Experience</th>
-											<th>Plus d'information<th>
+                                            <th>Nom</th>
+                                            <th>Prenom</th>
+											<th>Email</th>
+											<th>Categorie</th>
+                                            <th>Nombre d'article</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td>Badr</td>
+                                            <td>Zt</td>
+                                            <td>ldksfml@dsfkdsl.fsd</td>
                                             <td>Sport</td>
-                                            <td>ldksfmldsfkdslfsd</td>
-											<td><button class="btn"><i class="icon-eye-open"></i> + </button></td>
+                                            <td>120</td>
+											
                                         </tr>
 										<tr>
 										<td>2</td>
 										<td>Titif</td>
-										<td>Eco</td>
-										<td>ldksfmldsfkdslfsd</td>
-										<td><button class="btn"><i class="icon-eye-open"></i> + </button></td>
+                                        <td>Zt</td>
+                                        <td>ldksfml@dsfkdsl.fsd</td>
+                                        <td>Sport</td>
+                                        <td>120</td>
+										
 									</tr>
 									<tr>
-                                            <td>3</td>
-                                            <td>Malik</td>
-                                            <td>Politique</td>
-                                            <td>ldksfmldsfkdslfsd</td>
-											<td><button class="btn"><i class="icon-eye-open"></i> + </button></td>
+                                        <td>3</td>
+                                        <td>Malik</td>
+                                        <td>Zt</td>
+                                        <td>ldksfml@dsfkdsl.fsd</td>
+                                        <td>Sport</td>
+                                        <td>120</td>
+											
                                         </tr>
 										<tr>
                                             <td>4</td>
                                             <td>Layla</td>
-                                            <td>Feminin</td>
-                                            <td>ldksfmldsfkdslfsd</td>
-											<td><button class="btn"><i class="icon-eye-open"></i> + </button></td>
+                                            <td>Zt</td>
+                                            <td>ldksfml@dsfkdsl.fsd</td>
+                                            <td>Sport</td>
+                                            <td>120</td>
+											
                                         </tr>
                                     </tbody>
                                 </table>

@@ -30,4 +30,9 @@ class RedacteurEnChefController extends Controller
     {
         return view('RedacteurEnChef/sousCat');
     }
+
+     public function listRedacteurs()
+    {
+        return view('RedacteurEnChef/listRedacteurs');
+    }
 }

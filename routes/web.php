@@ -49,6 +49,7 @@ Route::get('RedacteurEnChef/articles', ['as' => 'refArticles', 'uses' => 'Redact
 Route::get('RedacteurEnChef/comments', ['as' => 'refComments', 'uses' => 'RedacteurEnChefController@comments']);
 Route::get('RedacteurEnChef/redacteurs', ['as' => 'refRedacteurs', 'uses' => 'RedacteurEnChefController@reds']);
 Route::get('RedacteurEnChef/sousCategories', ['as' => 'refSousCat', 'uses' => 'RedacteurEnChefController@sousCat']);
+Route::get('RedacteurEnChef/listRedacteurs', ['as' => 'listRedacteurs', 'uses' => 'RedacteurEnChefController@listRedacteurs']);
 
 
 
