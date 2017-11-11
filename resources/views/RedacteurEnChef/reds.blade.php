@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-	<h1>Approuvation des articles</h1>
+	<h1>Gestion des demandes de poste rédacteur</h1>
 	<div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-hover">
