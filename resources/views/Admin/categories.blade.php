@@ -12,16 +12,16 @@
 @stop
 
 @section('content')
-
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
-			<h2>Categories</h2>
-			<hr>
-			<table class="table">
+	<h1>Categories</h1>
+	<hr>
+	<div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
 				<thead>
 					<tr>
 						<th>#</th>
 						<th>Name</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 
@@ -30,6 +30,10 @@
 					<tr>
 						<th>{{ $category->id }}</th>
 						<td>{{ $category->name }}</td>
+						<td>
+							<button class="btn btn-primary"><i class="icon-pencil icon-white"></i> Modifier</button>
+							<button class="btn btn-danger"><i class="icon-remove icon-white"></i> Supprimer</button>
+						</td>
 					</tr>
 					@endforeach
 				</tbody>

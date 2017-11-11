@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class AdminController extends Controller
 {
@@ -28,7 +29,8 @@ class AdminController extends Controller
      */
     public function refs()
     {
-        return view('Admin/refs');
+        $refs = User::all()->where('role', 'ref');
+        return view('Admin/refs')->withRefs($refs);
     }
 
     /**
@@ -36,7 +38,8 @@ class AdminController extends Controller
      */
     public function reds()
     {
-        return view('Admin/reds');
+        $reds = User::all()->where('role', 'red');
+        return view('Admin/reds')->withReds($reds);
     }
 
     /**
