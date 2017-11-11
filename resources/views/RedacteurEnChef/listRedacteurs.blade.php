@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-	<h1>Redacteurs</h1>
+	<h1>Liste des Redacteurs</h1>
 	<div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-hover">
